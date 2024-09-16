@@ -1,0 +1,740 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root{
+    --green: #16a085;
+    --black:#444;
+    --light-color:#111;
+    --box-shadow:.5rem .5rem 0 rgba(22, 160, 133, .2);
+    --text-shadow:.4rem .4rem 0 rgba(0, 0, 0, .2);
+    --border:.2rem solid #16a085;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all .2s ease-out;
+    text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+section{
+    padding:5rem 1%;
+}
+
+
+
+.heading{
+    text-align: center;
+    padding-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color:var(--black);
+    font-size: 5rem;
+    letter-spacing: .4rem;
+}
+
+.heading span{
+    text-transform: uppercase;
+    color:#16a085;
+}
+
+
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .5rem;
+    padding-left: 1rem;
+    border:var(--border);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    color:var(--green);
+    cursor: pointer;
+    font-size: 1.7rem;
+    background: #fff;
+}
+
+.btn span{
+    padding:.7rem 1rem;
+    border-radius: .5rem;
+    background: var(--green);
+    color:#fff;
+    margin-left: .5rem;
+}
+
+.btn:hover{
+    background: var(--green);
+    color:#fff;
+}
+
+.btn:hover span{
+    color: var(--green);
+    background:#fff;
+    margin-left: 1rem;
+}
+
+nav{
+    padding:1.5rem 40%;
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #16a085;
+   
+}
+
+
+.header .logo{
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-left: 10px;
+}
+
+.header .logo i{
+    color: #c0392b;
+}
+
+nav a{
+    font-size: 1.7rem;
+    color: var(--light-color);
+    margin-left: 2rem;
+}
+
+nav a:hover{
+    color:red;
+}
+nav .active {
+    color:red;
+    background-color: #16a085;
+    box-shadow:3px 3px 15px 3px rgb(55, 57, 68);
+}
+
+#menu-btn{
+    font-size: 2.5rem;
+    border-radius: .5rem;
+    background: var(--green);
+    color:#fff;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+/* --------------------------------home style starts---------------------------------- */
+.home{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    padding-top: 10rem;
+}
+
+.home .image{
+    flex:1 1 45rem;
+}
+
+.home .image img{
+    width: 100%;
+}
+
+.home .content{
+    flex:1 1 45rem;
+}
+
+.home .content h3{
+    font-size: 4.5rem;
+    color:var(--black);
+    line-height: 1.8;
+    text-shadow: var(--text-shadow);
+}
+
+.home .content p{
+    font-size: 1.7rem;
+    color:var(--light-color);
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+/* --------------------------------home style ends---------------------------------- */
+
+/*--------------------------- ------about style starts---------------------------- */
+.about .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem; 
+}
+
+.about .row .image{
+    flex: 1 1 45rem;
+}
+
+.about .row .image img{
+    width: 100%;
+}
+
+.about .row .content{
+    flex: 1 1 45rem;
+}
+
+.about  .row .content h3{
+    font-size: 3.5rem;
+    color:var(--black);
+    line-height: 1.8;
+    text-shadow: var(--text-shadow);
+}
+
+
+.about .row .content p{
+    color: var(--light-color);
+    padding: 1rem 0;
+    font-size: 2rem;
+    line-height: 1.8;
+
+}
+/*--------------------------- ------about style ends---------------------------- */
+
+
+
+
+
+/*--------------------------- ------services style starts---------------------------- */
+   .services .box{
+    position: relative;
+    text-align: center;
+    background-color: white;
+    height: 250px;
+    margin-top: 20px;
+    box-shadow: 0 3px 10px 0 rgb(0 0 0 / 20%);
+    transition: all 1s ease;
+    cursor: pointer;
+    border:var(--border);
+    border-radius: 10px;
+}
+.services .box:hover{
+    box-shadow: 0px 0px 10px rgb(2 1 7 / 20%);
+    transform: scale(1.1,1.1);
+}
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap:2rem;
+}
+
+
+
+.services .box-container .box i{
+    color: var(--green);
+    font-size: 5rem;
+    padding-bottom: .5rem;
+}
+
+.services .box-container .box h3{
+    padding-top: 40px;
+    font-size: 18px;
+    margin-bottom: 13px;
+}
+
+.services .box-container .box p{
+    font-size: 14px;
+    font-family: 'Baloo 2', cursive;
+    color: rgba(0, 0, 0, 0.696);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.services .box-container .box a {
+    background-color:var(--green);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .services .learn-more-btn:hover {
+    background-color:var(--green);
+    color:#fff;
+    margin-left:1rem;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .services a.learn-more-btn {
+    text-decoration: none;
+    
+  }
+/*--------------------------- ------services style ends---------------------------- */
+  
+
+
+/*--------------------------- ------doctors style starts---------------------------- */
+
+/* .section  .doctors .box-container{
+    display: grid;
+   justify-content: space-between;
+    gap:20px;
+    
+} */
+.doctors .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.doctors .box-container .box{
+    text-align: center;
+    background:#fff;
+    border-radius: 20px;
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    padding:2rem;
+    /* margin:auto; */
+    width: 20%;
+    margin-left: 1%;
+    margin-top: 2%;
+}
+
+
+
+.doctors .box-container .box img{
+    height: 16rem;
+    border:var(--border);
+    border-radius: .5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.doctors .box-container .box h3{
+    color:var(--black);
+    font-size: 2rem;
+}
+
+.doctors .box-container .box span{
+    color:var(--green);
+    font-size: 1.5rem;
+}
+/*--------------------------- ------doctors style ends---------------------------- */
+
+
+/*--------------------------- ------appointment style starts---------------------------- */
+.appointment .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.appointment .row .image{
+    flex: 1 1 45rem;
+}
+
+.appointment .row .image .img{
+    width: 100%;
+
+}
+
+.appointment .row form{
+    flex: 1 1 45rem;
+    background: #fff;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    padding: 2rem;
+    border-radius: .5rem;
+    margin: 10rem 5rem ;
+}
+
+.appointment .row form h3{
+    color: var(--black);
+    padding-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.appointment .row form .box{
+    width: 100%;
+    margin:1.5rem 0;
+    border-radius: .5rem;
+    border: var(--border);
+    font-size: 1.6rem;
+    color:var(--black);
+    text-transform: none;
+    padding: 1rem;
+}
+
+.appointment .row form .btn{
+    padding: 1rem 4rem;
+}
+
+.appointment form label {
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 10px;
+   }
+/*--------------------------- ------appointment style ends---------------------------- */
+
+
+/*--------------------------- ------faq style starts---------------------------- */
+  .faq{
+    padding-bottom: 80px;
+}
+
+.faq table tr td{
+    margin-left: 30px;
+}
+.con{
+    margin-left: 20px;
+    font-family: 'Baloo 2', cursive;
+    bottom: 1px solid black;
+}
+.con h4{
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Baloo 2', cursive;
+    margin-right: 20px;
+}
+.faq table .par{
+    font-family: 'Baloo 2', cursive;
+    color: rgba(0, 0, 0, 0.696);
+    padding-bottom: 35px;
+    margin-right: 20px;
+    border-bottom: 1px solid transparent;
+    box-shadow: 0px 2px 4px 0px rgba(44, 44, 59, 0.689);
+    padding-left: 20px;
+    padding-top: 15px;
+    background-color: #d1d6ea5f;
+    background-image: linear-gradient(to left,#6de17641, #eacea941, #c4ecd03e);
+}
+/*--------------------------- ------faq style ends---------------------------- */
+
+
+/*--------------------------- ------review style starts---------------------------- */
+.review .box-container{
+   padding:2px;
+   
+}
+
+.review h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+   }
+
+
+
+.review .box-container .box{
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    padding:2.5rem;
+    background: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin: 1rem 31rem;
+}
+
+.review .box-container .box img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border:.5rem solid #fff;
+}
+
+.review .box-container .box h3{
+    color:#fff;
+    font-size: 2.2rem;
+    padding:.5rem 0;
+}
+
+.review .box-container .box .stars i{
+    color:#fff;
+    font-size: 1.5rem;
+}
+
+.review .box-container .box .text{
+    color:var(--light-color);
+    line-height: 1.8;
+    font-size: 1.6rem;
+    padding-top: 5rem;
+}
+
+.review .box-container .box::before{
+    content: '';
+    position: absolute;
+    top:-4rem; left: 50%;
+    transform:translateX(-50%);
+    background:var(--green);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    height: 25rem;
+    width: 120%;
+    z-index: -1;
+}
+/*--------------------------- ------review style ends---------------------------- */
+
+
+/*--------------------------- ------contact style starts---------------------------- */
+.contact .box-container {
+    margin-left: 46%;
+}
+
+.contact .image {
+    float: left;
+    width: 40%;
+    margin: 20px;
+   }
+   
+  .contact .image img {
+    width: 50%;
+    height: auto;
+   }
+.contact .box-container .box h3{
+    font-size: 2.5rem;
+    color:var(--black);
+    padding: 1rem 0;
+}
+
+.contact .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    color:var(--light-color);
+    padding: 1rem 0;
+}
+
+.contact .box-container .box a i{
+    padding-right: .5rem;
+    color:var(--green);
+}
+
+.contact.box-container .box a:hover i{
+    padding-right:2rem;
+}
+
+.contact .credit{
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    text-align: left;
+    font-size: 2rem;
+    color:var(--light-color);
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+
+.contact .credit span{
+    color:var(--green);
+}
+/*--------------------------- ------contact style ends---------------------------- */
+
+   
+
+
+
+
+/* --------------------------------register style starts---------------------------------- */
+
+   .register body {
+  
+    background-color:  #f5f5f5;
+   }
+
+ .register  header {
+    background-color:  #f5f5f5;
+    color: #f5f5f5;
+    padding: 20px;
+   }
+   
+
+.register a{
+    text-decoration: underline;
+    color:blue;
+}
+.register-box  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   }
+   
+   .register-box  nav li {
+    display: inline-block;
+    margin-right: 20px;
+   }
+   
+   .register-box  nav a {
+    color: #fff;
+    text-decoration: none;
+   }
+   
+   .register-box  main {
+    margin: 20px;
+   }
+   
+   .register-box {
+    width: 40%;
+    margin:1rem 45rem;
+    border-radius: .5rem;
+    border:var(--border);
+    float: right;
+    padding: 1rem;
+   
+   }
+   
+   .register-box   form label {
+    font-size: 15px;
+    display: block;
+    margin-bottom: 10px;
+   }
+   
+   .register-box  form input, form textarea {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #16a085;
+    border-radius: 5px;
+    width: 100%;
+   }
+   
+   .register-box  form input[type="submit"] {
+    background-color: #16a085;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+   }
+   
+   .register-box   form input[type="submit"]:hover {
+    background-color:#16a085;
+   }
+   /* --------------------------------register style ends---------------------------------- */
+   
+  
+
+/* -------------------------------- login style starts---------------------------------- */
+   .login body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:  #f5f5f5;
+   }
+
+ .login  header {
+    background-color:  #f5f5f5;
+    color: #f5f5f5;
+    padding: 20px;
+   }
+   
+.login-box  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   }
+   
+   .login-box  nav li {
+    display: inline-block;
+    margin-right: 20px;
+   }
+   
+   .login-box  nav a {
+    color: #fff;
+    text-decoration: none;
+   }
+   
+   .login-box  main {
+    margin: 20px;
+   }
+   
+   .login-box {
+    width: 33%;
+    margin:5rem 50rem;
+    border-radius: .5rem;
+    border:var(--border);
+    float: right;
+    padding: 1rem;
+   
+   }
+   
+   .login-box   form label {
+    font-size: 15px;
+    display: block;
+    margin-bottom: 10px;
+   }
+   
+   .login-box  form input, form textarea {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #16a085;
+    border-radius: 5px;
+    width: 100%;
+   }
+   
+   .login-box  form input[type="submit"] {
+    background-color: #16a085;
+    color: #fff;
+    border: none;
+    padding: 20px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+   }
+   
+   .login-box   form input[type="submit"]:hover {
+    background-color: #16a085;
+   }
+   /* --------------------------------login style ends---------------------------------- */
+
+/* --------------------------------profile style starts---------------------------------- */
+
+   .profile-box {
+    width: 33%;
+    margin:10rem 10rem;
+    border-radius: .5rem;
+    border:var(--border);
+    float: left;
+    padding: 1rem;
+   
+   }
+  .profile-box p{
+    color: var(--light-color);
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    line-height: 1.8;
+
+}
+
+   .profile-box a{
+    text-decoration: underline;
+    color:blue;
+    font-size: 1.5rem;
+}
+/* --------------------------------profile style ends---------------------------------- */
+
+/* --------------------------------person style starts---------------------------------- */
+
+.person-box {
+    width: 33%;
+    margin:10rem 10rem;
+    border-radius: .5rem;
+    border:var(--border);
+    float: left;
+    padding: 1rem;
+   
+   }
+   .person-box p{
+    color: var(--light-color);
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    line-height: 1.8;
+
+}
+/* --------------------------------person style ends---------------------------------- */
+
+
